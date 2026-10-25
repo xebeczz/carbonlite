@@ -1,0 +1,8 @@
+activity_key,unit,factor_kg_co2e_per_unit,source,source_version,year,region,notes
+electricity_grid_in,kWh,VERIFY_ME,"CEA CO2 Baseline Database (India)","latest edition to be cited",2024,IN,"VERIFY_ME: enter the latest combined-margin grid emission factor from the official CEA CO2 Baseline Database. Do not use an unverified value in a real report."
+diesel_litre,litre,VERIFY_ME,"IPCC 2006 Guidelines / DEFRA conversion factors","edition to be cited",2024,IN,"VERIFY_ME: enter the verified diesel stationary-combustion factor (kg CO2e per litre)."
+petrol_litre,litre,VERIFY_ME,"IPCC 2006 Guidelines / DEFRA conversion factors","edition to be cited",2024,IN,"VERIFY_ME: enter the verified petrol combustion factor (kg CO2e per litre)."
+lpg_kg,kg,VERIFY_ME,"IPCC 2006 Guidelines / DEFRA conversion factors","edition to be cited",2024,IN,"VERIFY_ME: enter the verified LPG combustion factor (kg CO2e per kg)."
+diesel_spend_inr,INR,VERIFY_ME,"Spend-based proxy — source to be approved","to be cited",2024,IN,"VERIFY_ME: enter an approved spend-based diesel proxy (kg CO2e per INR). Used only when quantity is missing."
+petrol_spend_inr,INR,VERIFY_ME,"Spend-based proxy — source to be approved","to be cited",2024,IN,"VERIFY_ME: enter an approved spend-based petrol proxy (kg CO2e per INR). Used only when quantity is missing."
+lpg_spend_inr,INR,VERIFY_ME,"Spend-based proxy — source to be approved","to be cited",2024,IN,"VERIFY_ME: enter an approved spend-based LPG proxy (kg CO2e per INR). Used only when quantity is missing."

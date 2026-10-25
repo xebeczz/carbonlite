@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-sand font-sans text-ink antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: #cfe0d4;
+    color: #123f2e;
+  }
+
+  :focus-visible {
+    outline: 2px solid #2f6f4e;
+    outline-offset: 2px;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.55;
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-line bg-white shadow-card;
+  }
+
+  .card-soft {
+    @apply rounded-2xl border border-line/70 bg-[#fbfaf5];
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.18em] text-leaf;
+  }
+
+  .display {
+    @apply font-display font-semibold tracking-[-0.02em] text-forest;
+  }
+
+  .btn {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition
+      disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-forest text-white shadow-sm hover:bg-forest-deep active:translate-y-px;
+  }
+
+  .btn-secondary {
+    @apply btn border border-line bg-white text-forest hover:border-leaf hover:bg-leaf-pale/60;
+  }
+
+  .btn-quiet {
+    @apply btn text-forest hover:bg-forest/5;
+  }
+
+  .btn-danger {
+    @apply btn border border-danger/25 bg-danger/5 text-danger hover:bg-danger/10;
+  }
+
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-[0.08em] text-ink-muted;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-line bg-white px-3.5 py-2.5 text-sm text-ink shadow-sm
+      placeholder:text-ink-muted/60 focus:border-leaf focus:outline-none focus:ring-2 focus:ring-leaf/15
+      disabled:bg-sand-deep/50 disabled:text-ink-soft;
+  }
+
+  .select {
+    @apply input appearance-none bg-[length:16px] bg-[right_0.85rem_center] bg-no-repeat pr-9;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23718077'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[11px] font-semibold;
+  }
+
+  .chip-neutral {
+    @apply chip border-line bg-sand text-ink-soft;
+  }
+
+  .chip-leaf {
+    @apply chip border-leaf/20 bg-leaf-pale text-leaf;
+  }
+
+  .chip-amber {
+    @apply chip border-clay/25 bg-[#fdf3e4] text-clay;
+  }
+
+  .chip-danger {
+    @apply chip border-danger/20 bg-[#fbeceb] text-danger;
+  }
+
+  .skeleton {
+    @apply rounded-xl bg-[linear-gradient(90deg,#ece9df_0%,#f7f6f1_40%,#ece9df_80%)] bg-[length:800px_100%] animate-shimmer;
+  }
+
+  .section-title {
+    @apply text-lg font-semibold tracking-[-0.01em] text-forest;
+  }
+
+  .prose-note {
+    @apply text-sm leading-6 text-ink-soft;
+  }
+
+  .divider {
+    @apply border-t border-line;
+  }
+
+  .table-head {
+    @apply text-left text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-muted;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-[#dce9df]/80 transition
+      hover:bg-white/10 hover:text-white;
+  }
+
+  .nav-link-active {
+    @apply bg-white/10 text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)];
+  }
+
+  .mobile-nav-link {
+    @apply flex min-w-0 flex-1 flex-col items-center justify-center gap-1 rounded-lg px-1 py-1.5 text-[10px] font-medium text-ink-muted;
+  }
+
+  .mobile-nav-link-active {
+    @apply text-forest;
+  }
+}
+
+/* thin, calm scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c7d1c9 transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #c7d1c9;
+  border-radius: 999px;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+}

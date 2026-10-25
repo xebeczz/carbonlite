@@ -1,0 +1,18 @@
+{
+  "name": "CarbonLite — simple carbon accounting",
+  "short_name": "CarbonLite",
+  "description": "Turn bills and receipts into auditable Scope 1 and 2 emissions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f5ef",
+  "theme_color": "#123f2e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

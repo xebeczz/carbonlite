@@ -1,0 +1,28 @@
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.db
+backend/carbonlite.db
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# env / secrets
+.env
+backend/.env
+
+# node
+node_modules/
+frontend/dist/
+frontend/node_modules/
+.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# generated reports
+*.pdf.tmp
+backups/
