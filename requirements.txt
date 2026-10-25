@@ -1,12 +1,17 @@
+# Vercel deployment copy of the backend requirements.
+# NOTE: This file intentionally differs from backend/requirements.txt.
+# Vercel builds the serverless function with Python 3.14, so the compiled
+# packages here are pinned to versions that ship Python 3.14 wheels.
+# backend/requirements.txt (the local/dev set) is left untouched.
+# uvicorn and pytest are omitted: Vercel serves the ASGI app itself, and
+# tests never run on the server.
 fastapi==0.109.0
-uvicorn[standard]==0.27.0
-SQLAlchemy==2.0.25
-pydantic==2.5.3
+SQLAlchemy==2.0.43
+pydantic==2.12.0
 python-multipart==0.0.6
 python-dotenv==1.0.0
 httpx==0.27.2
-PyMuPDF==1.23.8
-Pillow==10.2.0
+PyMuPDF==1.26.4
+Pillow==11.3.0
 reportlab==4.0.9
-pytest==7.4.4
 pytesseract==0.3.10
